@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>テキスト整形ツール</title>
+</head>
+<body>
+
+<h1>テキスト整形ツール</h1>
+<h2>改行・空白・タブ削除ツール</h2>
+
+<p>改行やタブなどを削除してテキストを整形します。</p>
+
+<form id="form">
+  <label for="options">設定:</label><br>
+  <input type="checkbox" id="newline" name="newline"> 改行<br>
+  <input type="checkbox" id="tab" name="tab"> タブ<br>
+  <input type="checkbox" id="spaces" name="spaces"> 行頭・行末のスペース<br>
+  <input type="checkbox" id="allSpaces" name="allSpaces"> 全てのスペース<br>
+  <br>
+  <input type="button" value="整形" onclick="formatText()">
+  <input type="button" value="クリア" onclick="clearText()">
+</form>
+
+<p>ここに文字を入力してください。</p>
+<textarea id="inputText" rows="10" cols="50"></textarea>
+
+<p>ここに文字を入力してください。</p>
+<textarea id="outputText" rows="10" cols="50" readonly></textarea>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
